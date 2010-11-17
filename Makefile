@@ -7,11 +7,14 @@ CFLAGS=-c -g -Wall
 
 all:	decisiontree
 
-decisiontree: run.o
-	$(CC) run.o -o decision.exe
+decisiontree: run.o vertice.o
+	$(CC) run.o vertice.o -o decision.exe
 
 run.o:	run.cpp
 	$(CC) $(CFLAGS) run.cpp
+
+vertice.o:	Vertice.cpp
+	$(CC) $(CFLAGS) Vertice.cpp
 
 clean:
 	rm -rf *o decision.exe
