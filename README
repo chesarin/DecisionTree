@@ -1,3 +1,55 @@
 This is the decision program for the class of AI Fall 2010 Queens College.
 
 Cesar Vargas
+
+The following is the algorithm give by Dr. Phillips
+
+vectors	    <- input
+num_vectors <- count_member(vectors)
+num_feature <- count_member(first(vectors)-1)
+entropy	    <- compute_entropy(vectors, num_vectors)
+tree	    <- learning(vectors, num_vectors, num_features, entropy)
+
+Output(Tree)
+
+learning (vectors, num_vectors, num_feature, entropy )
+  if ( vectors is NULL) return NULL
+  
+  elseif ( vectors is singleton or entropy == 0 )
+  	 make a leaf node which has the vector's label in it 
+	 return the leaf node
+  otherwise 
+  	 (which_feature, threshold, entropy) Best_cut(vectors,num_vectors,num_feature);
+	 (left_vectors,right_vectors,entropy) divide(vectors,num_feature,num_vectors,which_feature,threshold);
+
+
+new_node <-  make_new(which_feature, threshold, entropy)
+
+new_node <-  left <-  learning(left_vectors, count_member(left_vectors), num_feature, compute_entropy(left_vectors));
+
+new_node <-  right <-  learning(right_vectors, count_member(right_vectors), num_feature, compute_entropy(right_vectors));
+
+return (new_node);
+
+Best_cut( vectors, num_vectors, num_feature, entropy)
+	  which_feature <- 0;
+	  min_threshold <- vectors[0][0]
+	  min_entropy	<- entropy
+	  for ( feat = 0 ; feat < num_feature ; feat++)
+	      for ( vectors=0 ; vectors < num_vectors ; vectors++)
+	      	  new_entropy <-  child_entropy(vectors, num_vectors, feat, vectors[vect][feature];
+		  if ( new_entropy < min_entropy )
+		     min_entropy <- new_entropy;
+		     min_threshold <- vectors[vect][feat];
+		     which_feature <- feat;
+		     
+	return (which_feature, min_theshold, min_entropy);
+
+child_entropy(vectors, num_vect, feat, threshold)
+   for ( vect = 0 ; vect < num_vect ; vect++ )
+      if( vectors[vect][feat] <= threshold )
+      	  put this vector in left child set set1.
+      else
+          put this vector in rigth child set set2.
+    sum <- sum of the entropy of set1 and entropy of set2.
+return sum;
