@@ -10,10 +10,10 @@ class Vertice{
  public:
   int color;
   int shape;
-  float weight;
+  int weight;
   int type;
   Vertice();
-  Vertice(int c,int s,float w, int t);
+  Vertice(int c,int s,int w, int t);
   void print();
 };
 #endif
