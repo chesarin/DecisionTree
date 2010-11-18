@@ -1,3 +1,7 @@
+/*Cesar Vargas
+ *AI Fall 2010
+ *Decision Trees Program
+ */
 #include <iostream>
 #include <fstream>
 #include <vector>
