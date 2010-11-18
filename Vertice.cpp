@@ -1,3 +1,8 @@
+/*Cesar Vargas
+ *AI Fall 2010
+ *Vertice.h
+ *Decision Trees Program
+ */
 #include "Vertice.h"
 // Vertice::Vertice(){
 //   color = 0 ; shape = 0; weight = 0 ; type-0;
