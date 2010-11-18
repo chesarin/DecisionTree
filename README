@@ -25,9 +25,9 @@ learning (vectors, num_vectors, num_feature, entropy )
 
 new_node <-  make_new(which_feature, threshold, entropy)
 
-new_node <-  left <-  learning(left_vectors, count_member(left_vectors), num_feature, compute_entropy(left_vectors));
+new_node<-left<-learning(left_vectors, count_member(left_vectors), num_feature, compute_entropy(left_vectors));
 
-new_node <-  right <-  learning(right_vectors, count_member(right_vectors), num_feature, compute_entropy(right_vectors));
+new_node<-right<-learning(right_vectors, count_member(right_vectors), num_feature, compute_entropy(right_vectors));
 
 return (new_node);
 
