@@ -1,6 +1,7 @@
 /*Cesar Vargas
  *AI Fall 2010
  *Vertice.h
+ *Decision Trees Program
  */
 #ifndef VERTICE_H_
 #define VERTICE_H_
